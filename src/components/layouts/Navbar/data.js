@@ -17,4 +17,16 @@ export default [
     path: "/test",
     active: false,
   },
+  {
+    id: 4,
+    title: "Quản lý danh mục",
+    path: "/category",
+    active: true,
+  },
+  {
+    id: 5,
+    title: "Loader",
+    path: "/loader",
+    active: true,
+  },
 ];

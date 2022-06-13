@@ -38,13 +38,18 @@ export default function NavBar(props) {
 
 const ItemMenu = (props) => {
   const { id, title, path, active, setOpen, open } = props;
+  let activeStyle = {
+    backgroundColor: "#0ea5e9",
+    color: "#fff",
+  };
   return (
     <NavLink
       to={path}
       key={id}
       className={`${
         !active && "hidden"
-      } p-4 hover:bg-sky-500 hover:text-white duration-150 font-semibold text-slate-500`}
+      } p-4 hover:bg-sky-200 hover:text-white duration-150 font-semibold text-slate-500 `}
+      style={({ isActive }) => (isActive ? activeStyle : undefined)}
     >
       <span className={`${open && "hidden"}`}>{title}</span>
     </NavLink>

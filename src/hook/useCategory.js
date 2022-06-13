@@ -1,13 +1,13 @@
 import { useQuery } from "react-query";
 import axios from "axios";
 
-const getPosts = async () => {
+const getPostById = async () => {
   const { data } = await axios.get(
-    "https://jsonplaceholder.typicode.com/posts"
+    "https://62a60ad1430ba53411d05109.mockapi.io/category"
   );
   return data;
 };
 
 export default function usePosts() {
-  return useQuery("posts", getPosts);
+  return useQuery("category", getPostById);
 }

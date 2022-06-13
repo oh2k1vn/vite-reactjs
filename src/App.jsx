@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import NavBar from "./components/layouts/Navbar";
 import User from "./pages/User";
+import Category from "./pages/Category";
+import Loader from "./components/common/loader";
 
 function App() {
   const [open, setOpen] = React.useState(false);
@@ -18,6 +20,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/user" element={<User />} />
+            <Route path="/category" element={<Category />} />
+            <Route path="/loader" element={<Loader />} />
           </Routes>
         </div>
       </div>
